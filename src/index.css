@@ -1,0 +1,341 @@
+@import "rsuite/dist/rsuite.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wave {
+	animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+	animation-duration: 2.1s; /* Change to speed up or slow down */
+	animation-iteration-count: infinite; /* Never stop waving :) */
+	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+	display: inline-block;
+}
+
+.main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  margin: auto;
+  height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 2em;
+}
+
+ul{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.btnlink{
+  width: 40%;
+  text-decoration: none;
+}
+
+.button, .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.button, .btn:hover {
+  border: 1px solid transparent;
+  font-size: 1em;
+  /*background-color: #1a1a1a;*/
+  background-color: #171651;
+  color: #fff;
+
+}
+
+.button:hover, .btn {
+  border: 1px solid #646cff;
+  background-color: transparent;
+  color: #535bf2;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.main > img{
+    border-radius: 50%;
+    width: 20%;
+    height: 250px;
+    margin-right: 5em;
+    -webkit-animation: animate 1s linear infinite;
+    animation: animate 1s linear infinite;
+}
+
+#logo{
+  width: 100%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.blue{
+  color: #646cff;
+}
+
+.info, .skills, .edu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.skills{
+  flex-direction: column;
+}
+
+.info > img {
+  width: 40%;
+}
+
+.info > aside {
+  width: 50%;
+}
+
+.tech-icons{
+	font-size: 4.5em !important;
+	margin: 15px !important;
+	padding: 10px !important;
+	opacity: 0.93 !important;
+	border: 1.7px solid #646cff !important;
+	vertical-align: middle !important;
+	text-align: center !important;
+	border-radius: 5px !important;
+	display: table !important;
+	box-shadow: 4px 5px 4px 3px #171651 !important;
+	overflow: hidden !important;
+	transition: all 0.4s ease 0s !important;
+}
+
+.tech-icons > p {
+	font-size: 0.25em !important;
+	margin-bottom: 0px;
+}
+
+.tech-icons:hover {
+	transform: scale(1.05) !important;
+	overflow: hidden !important;
+	border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+}
+
+.edu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.edu-box{
+    display: flex;
+    box-shadow: 4px 5px 4px 3px #171651 !important;
+    opacity: 0.93 !important;
+    border: 1.7px solid #646cff !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease 0s !important;
+    border-radius: 5px !important;
+    width: 40%;
+    margin-top: 1em;
+}
+
+.date{
+    background-color: #1b1c54;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    color: #fff;
+}
+
+.edu-name{
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 55%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 200px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.extra {
+  transition: .5s ease;
+  opacity: 0;
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 5.5em;
+  left: 11.7em;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.layout{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project {
+  position: relative;
+  width: 30%;
+  margin-top: 1em;
+}
+
+.project:hover .image {
+  opacity: 0.1;
+}
+
+.project:hover .extra {
+  opacity: 1;
+  background-color: #070640;
+  color: #fff;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #213547;
+}
+
+.footertop, .footerbottom{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.footertop > p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@-webkit-keyframes animate{
+  0%{
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+  }
+  100%{
+    box-shadow: 0 0 0px 15px #070640;
+  }
+}
+  
+@keyframes animate{
+  0%{
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+  }
+  100%{
+    box-shadow: 0 0 0px 15px #171651;
+  }
+}
+
+@keyframes wave-animation {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(14deg);
+	} /* The following five values can be played with to make the waving more or less extreme */
+	20% {
+		transform: rotate(-8deg);
+	}
+	30% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-4deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	} /* Reset for the last half to pause */
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
