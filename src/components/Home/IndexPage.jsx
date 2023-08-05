@@ -70,7 +70,7 @@ export default function IndexPage() {
             
       <Content className='main'>
 
-            <article>
+            <article className="pattern-dots-md red text-pattern max-w-20pc overflow-visible">
 
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
