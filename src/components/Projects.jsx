@@ -7,40 +7,71 @@ import photo from '../assets/screenshot.png'
 import photo1 from '../assets/screenshot1.png'
 import photo2 from '../assets/screenshot2.png'
 import photo3 from '../assets/screenshot3.png'
+import photo6 from '../assets/screenshot4.png'
+import photo4 from '../assets/screenshot6.png'
+import photo7 from '../assets/screenshot7.png'
+//import photo8 from '../assets/screenshot8.png'
+import photo5 from '../assets/screenshot9.png'
 
 const projects = [
     {
-      title: "React Space",
-      description:
-        "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      title: "Edublog",
+      description: "A fullstack crud application built with Django, jinja2 and Bulma CSS",
       img: photo,
-      repolink: "http://github.com",
+      repolink: "https://github.com/faozziyyah/django-blog-app",
       livelink: "http://",
     },
     {
-      title: "React Infinite Scroll",
-      description:
-        "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+      title: "Weather App",
+      description: "A weather application built with react and openweather API 🔥️",
+      img: photo5,
+      repolink: "https://github.com/faozziyyah/react-weather-app",
+      livelink: "https://faozziyyah.github.io/react-weather-app/",
+    },
+    {
+      title: "EMS",
+      description: "E-Commerce application built with Django, jinja2 and Bulma CSS and paystack integration 🔥️",
       img: photo1,
-      repolink: "http://github.com",
+      repolink: "https://github.com/faozziyyah/django-ecommerce-app",
       livelink: "http://",
     },
     {
-      title: "Photo Gallery",
-      description:
-        "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
+      title: "Keeper App",
+      description: "A note management app built with react and material UI",
+      img: photo7,
+      repolink: "https://github.com/faozziyyah/keeper-app",
+      livelink: "https://faozziyyah.github.io/keeper-app/",
+    },
+    {
+      title: "EventsBrits",
+      description: "Events management system to discover unique events and activities built with Django, Jinja template and Bootstrap",
       img: photo2,
-      repolink: "http://github.com",
+      repolink: "https://github.com/faozziyyah/events-app",
       livelink: "http://",
     },
     {
-      title: "Event planner",
+      title: "E-Millenial Store",
+      description: "E-Commerce application built with React, Redux and Seerbit payment integration 🔥️",
+      img: photo4,
+      repolink: "https://github.com/faozziyyah/E-Millenial-store",
+      livelink: "https://faozziyyah.github.io/E-Millenial-store/",
+    },
+    {
+      title: "Edulab",
       description:
-        "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
+        "A student portal application for managing students' details built with flask, jinja2 and Bootstrap",
       img: photo3,
-      repolink: "http://github.com",
+      repolink: "https://github.com/faozziyyah/Edulab-student-portal",
       livelink: "http://",
     },
+    {
+      title: "Scissors",
+      description: "URL shortener with QR code generator built with flask",
+      img: photo6,
+      repolink: "https://github.com/faozziyyah/url-shortener",
+      livelink: "http://",
+    },
+
   ];
 
 function Projects() {
@@ -75,8 +106,8 @@ function Projects() {
                   title={project.title}
                   description={project.description}
                   img={project.img}
-                  livelink={project.livelink}
                   repolink={project.repolink}
+                  livelink={project.livelink}
                   //imageSrc={project.getImageSrc()}
                 />
               ))}
