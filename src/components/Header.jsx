@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
-import CogIcon from '@rsuite/icons/legacy/Cog';
+//import CogIcon from '@rsuite/icons/legacy/Cog';
+import FolderIcon from '@mui/icons-material/Folder';
 import { Navbar, Nav } from 'rsuite';
 import { useState } from 'react'
 import logo from '../assets/logo.png'
 
 // eslint-disable-next-line react/prop-types
-const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
+const CustomNavbar = ({  ...props }) => {
     return (
-      <Navbar {...props} style={{backgroundColor: '#213547'}}>
+      <Navbar {...props} style={{backgroundColor: ''}}>
 
         <Navbar.Brand href="/" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '20%'}}>
             <img src={logo} alt="" id="headerlogo" style={{width: '30%'}} />
         </Navbar.Brand>
 
-        <Nav onSelect={onSelect} activeKey={activeKey}>
+        {/*<Nav onSelect={onSelect} activeKey={activeKey}>
 
             <Link to={'/projects'}  className=''>
                 <Nav.Item eventKey="1">About</Nav.Item>
@@ -24,10 +25,10 @@ const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
             </Link>
 
 
-        </Nav>
+        </Nav> */}
 
         <Nav pullRight>
-          <Nav.Item icon={<CogIcon />}>Settings</Nav.Item>
+          <Link className="projlink" to='/projects'> <FolderIcon />Projects </Link>
         </Nav>
 
       </Navbar>

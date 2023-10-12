@@ -1,34 +1,38 @@
 //import React from 'react'
-import { FaReact } from 'react-icons/fa';
-import { BiLogoRedux, BiLogoFlask, BiLogoDjango } from "react-icons/bi";
+import { BiLogoFlask } from "react-icons/bi";
 import NextImage from '../../assets/nextdotjs.svg'
-
+import html from '../../assets/html.png'
+import css from '../../assets/css.png'
+import js from '../../assets/js.png'
+import react from '../../assets/react.png'
+import redux from '../../assets/redux.png'
+import django from '../../assets/django.png'
 function TechStack() {
   return (
     <main className="icons">
 
         <div className="tech-icons">
-        <ion-icon name="logo-html5"></ion-icon>
+        <img src={html} />
 			<p>HTML</p>
         </div>
 
         <div className="tech-icons">
-        <ion-icon name="logo-css3"></ion-icon>
+        <img src={css} />
 			<p>CSS</p>
         </div>
 
         <div className="tech-icons">
-        <ion-icon name="logo-javascript"></ion-icon>
+        <img src={js} />
 			<p>JavaScript</p>
         </div>
 
         <div className="tech-icons">
-			<FaReact />
+        <img src={react} />
 			<p>ReactJs</p>
         </div>
 
         <div className="tech-icons">
-			<BiLogoRedux />
+        <img src={redux} />
 			<p>Redux</p>
         </div>
 
@@ -43,7 +47,7 @@ function TechStack() {
         </div>
 
         <div className="tech-icons">
-			<BiLogoDjango />
+        <img src={django} />
 			<p>Django</p>
         </div>
 

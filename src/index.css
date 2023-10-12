@@ -23,6 +23,19 @@
 	display: inline-block;
 }
 
+/*.main-content{
+  height: 100vh;
+  background-image: url(./assets/girl.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+.main, .about, .projects{
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./assets/girl.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .main{
   display: flex;
   justify-content: space-around;
@@ -145,19 +158,40 @@ button:focus-visible {
   width: 50%;
 }
 
+.icons, .tools{
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
+}
+
 .tech-icons{
-	font-size: 4.5em !important;
-	margin: 15px !important;
-	padding: 10px !important;
-	opacity: 0.93 !important;
-	border: 1.7px solid #646cff !important;
-	vertical-align: middle !important;
-	text-align: center !important;
-	border-radius: 5px !important;
-	display: table !important;
-	box-shadow: 4px 5px 4px 3px #171651 !important;
-	overflow: hidden !important;
-	transition: all 0.4s ease 0s !important;
+	font-size: 4.5em ;
+	margin: 15px ;
+	/*padding: 10px; */
+  width: 30%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	opacity: 0.93;
+	border: 1.7px solid #646cff ;
+	box-shadow: 4px 5px 4px 3px #171651 ;
+	vertical-align: middle ;
+	text-align: center ;
+	border-radius: 5px ;
+	/*display: table ;
+	overflow: hidden ;*/
+	transition: all 0.4s ease 0s ;
+}
+
+.icons .tech-icons > img {
+  width: 50%;
+}
+
+.tools .tech-icons > img {
+  width: 50%;
 }
 
 .tech-icons > p {
@@ -186,7 +220,7 @@ button:focus-visible {
     overflow: hidden !important;
     transition: all 0.4s ease 0s !important;
     border-radius: 5px !important;
-    width: 40%;
+    width: 45%;
     margin-top: 1em;
 }
 
@@ -216,6 +250,17 @@ button:focus-visible {
   backface-visibility: hidden;
 }
 
+.projlink{
+  display: flex;
+  justify-content: space-between;
+  width: 6em;
+  font-size: 15px;
+  color: goldenrod;
+  align-items: center;
+  margin-top: 1em;
+  margin-right: 2em;
+}
+
 .extra {
   transition: .5s ease;
   opacity: 0;
@@ -223,7 +268,7 @@ button:focus-visible {
   height: 180px;
   position: absolute;
   top: 6.4em;
-  left: 11.6em;
+  left: 11.12em;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
@@ -243,15 +288,27 @@ button:focus-visible {
   position: relative;
   width: 30%;
   margin-top: 1em;
+  background-color: transparent;
+  box-shadow: 2px 2px 2px black;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+  border-radius: 5px;
+}
+
+.projlinks{
+  margin-top: 10px;
 }
 
 .project:hover .image {
   opacity: 0.1;
 }
 
+.extra {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  color: #fff;
+}
+
 .project:hover .extra {
   opacity: 1;
-  background-color: #070640;
   color: #fff;
 }
 

@@ -91,7 +91,7 @@ function Projects() {
 
   return (
     
-    <div>
+    <div className="projects">
 
         <Header />
 

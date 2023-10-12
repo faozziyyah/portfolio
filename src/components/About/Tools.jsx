@@ -1,6 +1,12 @@
 //import React from 'react'
-import { SiYarn, SiNpm, SiPostman, SiPostgresql, SiMysql, SiGithub, SiGit, SiFigma } from "react-icons/si";
-
+import mySQL from '../../assets/mysql.png'
+import { SiGithub } from "react-icons/si";
+import git from '../../assets/git.png'
+import postman from '../../assets/postman.png'
+import npm from '../../assets/npm.png'
+import yarn from '../../assets/yarn.png'
+import postgres from '../../assets/postgres.png'
+import figma from '../../assets/figma.png'
 function Tools() {
   return (
     <main className="tools">
@@ -11,37 +17,37 @@ function Tools() {
         </div>
 
         <div className="tech-icons">
-			<SiPostman />
+        <img src={postman} />
 			<p>Postman</p>
         </div>
 
         <div className="tech-icons">
-			<SiNpm />
+        <img src={npm} />
 			<p>npm</p>
         </div>
 
         <div className="tech-icons">
-			<SiYarn />
+        <img src={yarn} />
 			<p>yarn</p>
         </div>
 
         <div className="tech-icons">
-			<SiGit />
+        <img src={git} />
 			<p>git</p>
         </div>
 
         <div className="tech-icons">
-			<SiPostgresql />
+        <img src={postgres} />
 			<p>PostgreSQL</p>
         </div>
 
         <div className="tech-icons">
-			<SiMysql />
+        <img src={mySQL} />
 			<p>mySQL</p>
         </div>
 
         <div className="tech-icons">
-			<SiFigma />
+        <img src={figma} />
 			<p>Figma</p>
         </div>
 

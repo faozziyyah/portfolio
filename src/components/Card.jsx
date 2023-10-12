@@ -10,16 +10,11 @@ const Card = ({ title, description, img, livelink, repolink }) => {
   // You should be able to implement the component with the elements imported above.
   // Feel free to import other UI components from Chakra UI if you wish to.
   return (
-    <VStack bg="white" borderLeftRadius="5" borderRightRadius="5" className="project" marginTop="1em">
+    <div className="project">
 
       <Image src={img} borderLeftRadius="5" borderRightRadius="5" alt='Img not loaded' width='100%' height="180px" />
 
-      <div className="extra">
-
-        <Heading color="white" as="h4" marginBottom="1em" marginTop="10px">{title}</Heading>
-        <Text color="white" width="80%" margin="auto">{description}</Text>
-
-        <div className="projlinks" style={{display: 'flex', justifyContent: 'space-between', marginTop: ''}}>
+      <div className="projlinks" style={{display: 'flex', justifyContent: 'space-between', marginTop: ''}}>
 
           <a className="btn" style={{ margin: "0.5rem", textDecoration: "none", width: "40%" }} href={repolink}>
               <GitHubIcon /> &nbsp; Code
@@ -30,10 +25,15 @@ const Card = ({ title, description, img, livelink, repolink }) => {
           </a>
 
         </div>
+
+      <div className="extra">
+
+        <Heading color="white" as="h4" marginBottom="1em" marginTop="10px">{title}</Heading>
+        <Text color="white" width="80%" margin="auto">{description}</Text>
       
       </div>
       
-    </VStack>
+    </div>
   );
 };
 

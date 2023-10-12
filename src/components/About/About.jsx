@@ -14,7 +14,7 @@ function About() {
 
         <Header />
         
-        <h1 style={{ fontSize: "3em", marginTop: "1em", fontWeight: "900" }}>Know Who <strong className="blue">I&rsquo;M</strong></h1>
+        <h1 style={{ fontSize: "4em", marginTop: "", fontWeight: "900" }}>Know Who <strong className="blue">I&rsquo;M</strong></h1>
 
         <section className="info">
 
@@ -59,11 +59,11 @@ function About() {
 
         <section className="skills">
             
-            <h1 className="project-heading"> Professional <strong className="blue">Skillset </strong> </h1>
+            <h1 className="project-heading" style={{marginTop: '1em', fontWeight: '800'}}> Professional <strong className="blue">Skillset </strong> </h1>
 
             <TechStack />
 
-            <h1 className="project-heading"> <strong className="blue">Tools</strong> I use </h1>
+            <h1 className="project-heading" style={{marginTop: '1em', fontWeight: '800'}}> <strong className="blue">Tools</strong> I use </h1>
 
             <Tools />
 
@@ -71,7 +71,7 @@ function About() {
 
         <section>
 
-            <h1 className="project-heading"> <strong className="blue">My</strong> Education </h1>
+            <h1 className="project-heading" style={{marginTop: '1em', fontWeight: '800'}}> <strong className="blue">My</strong> Education </h1>
 
             <div className="edu">
                     
@@ -84,7 +84,7 @@ function About() {
 
                     <div className="edu-name" style={{paddingTop: '10px', paddingBottom: '10px'}}>
                         <h4>Olabisi Onabanjo University</h4> <br />
-                        <p style={{fontSize: '12px',}}>Studying Nursing science at Obafemi Awolowo College of Health Sciences, Olabisi Onabanjo University, Nigeria.</p> 
+                        <p style={{fontSize: '15px', fontWeight: '800'}}>Studying Nursing science at Olabisi Onabanjo University, Nigeria.</p> 
                     </div>
 
                 </div>
@@ -98,7 +98,7 @@ function About() {
 
                     <div className="edu-name" style={{paddingTop: '10px', paddingBottom: '10px'}}>
                         <h4 className="p1">AltSchool Africa</h4> <br />
-                        <p>A 1-year course designed to cover all aspects of full-stack development using python.</p> 
+                        <p style={{fontSize: '15px', fontWeight: '800'}}>A 1-year course designed to cover all aspects of full-stack development using python.</p> 
                     </div>
 
                 </div>
@@ -112,7 +112,7 @@ function About() {
 
                     <div className="edu-name" style={{paddingTop: '10px', paddingBottom: '10px'}}>
                         <h4 className="p1">Techrity</h4> <br />
-                        <p>A 28-week course designed to cover all aspects of full-stack development.</p> 
+                        <p style={{fontSize: '15px', fontWeight: '800'}}>A 28-week course designed to cover all aspects of full-stack development.</p> 
                     </div>
 
                 </div>

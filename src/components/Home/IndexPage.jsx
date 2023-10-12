@@ -47,19 +47,19 @@ export default function IndexPage() {
         <Menu style={{marginTop: '4em'}}>
           
           <MenuItem
-            component={<Link to="/about" className="link" />}
+            component={<Link to="https://twitter.com/your_technurse" className="link" />}
             icon={<TwitterIcon />}
           >
           </MenuItem>
           
           <MenuItem
-            component={<Link to="/projects" className="link" />}
+            component={<Link to="https://linkedin.com/in/yourtechnurse" className="link" />}
             icon={<LinkedInIcon />}
           >
           </MenuItem>
           
           <MenuItem
-            component={<Link to="/projects" className="link" />}
+            component={<Link to="https://github.com/faozziyyah" className="link" />}
             icon={<GitHubIcon />}
           >
           </MenuItem>
