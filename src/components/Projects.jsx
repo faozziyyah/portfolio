@@ -10,10 +10,17 @@ import photo3 from '../assets/screenshot3.png'
 import photo6 from '../assets/screenshot4.png'
 import photo4 from '../assets/screenshot6.png'
 import photo7 from '../assets/screenshot7.png'
-//import photo8 from '../assets/screenshot8.png'
+import photo8 from '../assets/Desktop7.png'
 import photo5 from '../assets/screenshot9.png'
 
 const projects = [
+    {
+      title: "SDProctor",
+      description: "A fullstack exam proctoring application built with ReactJs, API integration",
+      img: photo8,
+      repolink: "https://github.com/faozziyyah/sdproctor",
+      livelink: "http://",
+    },
     {
       title: "Edublog",
       description: "A fullstack crud application built with Django, jinja2 and Bulma CSS",
