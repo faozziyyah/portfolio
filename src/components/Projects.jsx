@@ -9,7 +9,7 @@ import photo2 from '../assets/screenshot2.png'
 import photo3 from '../assets/screenshot3.png'
 import photo6 from '../assets/screenshot4.png'
 import photo4 from '../assets/screenshot6.png'
-import photo7 from '../assets/screenshot7.png'
+//import photo7 from '../assets/screenshot7.png'
 import photo8 from '../assets/Desktop7.png'
 import photo5 from '../assets/screenshot9.png'
 
@@ -45,7 +45,7 @@ const projects = [
     {
       title: "Keeper App",
       description: "A note management app built with react and material UI",
-      img: photo7,
+      img: photo1,
       repolink: "https://github.com/faozziyyah/keeper-app",
       livelink: "https://faozziyyah.github.io/keeper-app/",
     },
