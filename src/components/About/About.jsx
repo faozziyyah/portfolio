@@ -14,9 +14,11 @@ function About() {
 
         <Header />
         
-        <h1 style={{ fontSize: "4em", marginTop: "", fontWeight: "900" }}>Know Who <strong className="blue">I&rsquo;M</strong></h1>
+        <h1 style={{ fontSize: "3em", marginTop: "1em", fontWeight: "900" }}>Know Who <strong className="blue">I&rsquo;M</strong></h1>
 
         <section className="info">
+
+            <img src={image} alt="" id='pic4' />
 
             <aside>
 
@@ -42,18 +44,15 @@ function About() {
                   </li>
                 </ul>
 
-                <button className="button" style={{width: '50%', marginTop: '1em'}}
-					href={
-						"https://drive.google.com/file/d/1AbLUo2_2DkxbMEB1BC6VwNXWjps-a-eH/view?usp=sharing"
-					}
-					target="_blank"
+                <a className="button" style={{width: '50%', marginTop: '1em', textDecoration: 'none'}}
+					href="https://drive.google.com/file/d/1vQPTTkFW5kECZO2zjigHOs76M58S7m77/view?usp=drive_link"
 				>
 					{/*<AiOutlineDownload /> */} &nbsp;Download Resume
-				</button>
+				</a>
 
             </aside>
 
-            <img src={image} alt="" />
+            <img src={image} alt="" id='pic3' />
 
         </section>
 

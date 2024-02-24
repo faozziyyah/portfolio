@@ -9,7 +9,7 @@ import photo2 from '../assets/screenshot2.png'
 import photo3 from '../assets/screenshot3.png'
 import photo6 from '../assets/screenshot4.png'
 import photo4 from '../assets/screenshot6.png'
-//import photo7 from '../assets/screenshot7.png'
+import photo7 from '../assets/screenshot7.png'
 import photo8 from '../assets/Desktop7.png'
 import photo5 from '../assets/screenshot9.png'
 
@@ -43,11 +43,11 @@ const projects = [
       livelink: "http://",
     },
     {
-      title: "Keeper App",
-      description: "A note management app built with react and material UI",
-      img: photo1,
-      repolink: "https://github.com/faozziyyah/keeper-app",
-      livelink: "https://faozziyyah.github.io/keeper-app/",
+      title: "Pizza Ordering App",
+      description: "A fullstack app built with NextJs and MongoDB",
+      img: photo7,
+      repolink: "https://github.com/faozziyyah/pizzon",
+      livelink: "https://pizzon-alpha.vercel.app/",
     },
     {
       title: "EventsBrits",

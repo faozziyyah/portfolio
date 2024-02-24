@@ -11,14 +11,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
+import FolderIcon from '@mui/icons-material/Folder';
 
 
 export default function IndexPage() { 
 
   return (
-    <section className="show-container" style={{ display: "flex", height: "100vh" }}>
+    <section className="show-container">
 
-      <Sidebar backgroundColor="#1b1c54" width="5%">
+      <Sidebar backgroundColor="#1b1c54" width="5%" id="sidebar">
 
         <img src={logo} alt="" id="logo" />
 
@@ -70,7 +71,27 @@ export default function IndexPage() {
             
       <Content className='main'>
 
-            <article className="pattern-dots-md red text-pattern max-w-20pc overflow-visible">
+        <div className="navbar1" style={{width: '90%', margin: 'auto', marginTop: '5px'}}>
+
+          <Link className="" to='/' style={{width: "15%"}}> 
+            <img src={logo} alt="" id="headerlogo" style={{width: '100%'}} />
+          </Link>
+
+          <nav style={{display: 'flex', justifyContent: 'space-between', width: '50%'}}>
+
+            <Link className="" to='/about'> <PersonIcon /> </Link>
+            <Link className="" to='/projects'> <FolderIcon /> </Link>
+            <Link className="" to='https://twitter.com/your_technurse'> <TwitterIcon /> </Link>
+            <Link className="" to='https://linkedin.com/in/yourtechnurse'> <LinkedInIcon /> </Link>
+            <Link className="" to='https://github.com/faozziyyah'> <GitHubIcon /> </Link>
+
+          </nav>
+
+        </div>
+      
+        <img src={myself} alt="home pic" style={{borderRadius: "50%", width: '30%', marginBottom: '2em', height: '150px'}} id="pic1" />
+
+        <article className="pattern-dots-md red text-pattern max-w-20pc overflow-visible">
 
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
@@ -98,9 +119,9 @@ export default function IndexPage() {
                 
               </div>
 
-            </article>
+        </article>
       
-        <img src={myself} alt="home pic" style={{borderRadius: "50%"}} />
+        <img src={myself} alt="home pic" style={{borderRadius: "50%"}} id="pic2" />
 
       </Content>
 
