@@ -101,7 +101,7 @@ export default function IndexPage() {
               <h1 className="heading-name">
                 I&rsquo;M
                 <strong className="blue"> Faoziyyah</strong>, <br />
-                <strong className="main-name"> Web Developer.</strong>
+                <strong className="main-name"> Software Engineer.</strong>
               </h1>
 
               <div style={{ textAlign: "left" }}>

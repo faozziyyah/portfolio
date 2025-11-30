@@ -23,11 +23,12 @@ function About() {
             <aside>
 
                 <p style={{ textAlign: "justify" }}>
-                    Hi Everyone, I am <span className="blue">Faoziyyah </span>, 
-                    a graduate of backend engineering from <a href="http://">AltSchool Africa</a>. <br />
-                    I am Full-stack developer with a passion for design and technology and motivated to constantly 
-                    develop my skills and grow professionally. <br />
-                    My field of interest is using my skills and knowledge in technology to provide solutions to problems.
+                    Hi There, I am <span className="blue">Faoziyyah </span>, 
+                    a graduate of backend engineering from <a href="https://altschoolafrica.com/">AltSchool Africa</a>. <br />
+                    Experienced Full-Stack Engineer skilled in building secure, scalable, and high-performance 
+                    web applications using React, Next.js, Django, and Node.js. <br />
+                    Proficient in designing responsive frontends, developing robust RESTful APIs, and integrating
+                    third-party services to deliver seamless end-to-end solutions.
                     <br /> <br />
                     Apart from coding, here are some other activities that I love to do..
                 </p>
@@ -45,7 +46,8 @@ function About() {
                 </ul>
 
                 <a className="button" style={{width: '50%', marginTop: '1em', textDecoration: 'none'}}
-					href="https://drive.google.com/file/d/1vQPTTkFW5kECZO2zjigHOs76M58S7m77/view?usp=drive_link"
+					//href="https://drive.google.com/file/d/1vQPTTkFW5kECZO2zjigHOs76M58S7m77/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1B0Lk-3dYfOzojy1-mUjELfTRX5zaCKF3/view?usp=sharing"
 				>
 					{/*<AiOutlineDownload /> */} &nbsp;Download Resume
 				</a>
