@@ -1,74 +1,38 @@
 //import React from 'react'
-import { BiLogoFlask } from "react-icons/bi";
-import NextImage from '../../assets/nextdotjs.svg'
-import html from '../../assets/html.png'
-import css from '../../assets/css.png'
-import js from '../../assets/js.png'
-import react from '../../assets/react.png'
-import redux from '../../assets/redux.png'
-import django from '../../assets/django.png'
-import typescript from '../../assets/typescript.png'
-import nodejs from '../../assets/nodejs.png'
-import express from '../../assets/express.png'
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiRedux,
+  SiNextdotjs,
+  SiDjango,
+  SiNodedotjs,
+  SiExpress,
+  SiFlask
+} from 'react-icons/si'
+
+const techStack = [
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'React', icon: SiReact },
+  { name: 'Redux', icon: SiRedux },
+  { name: 'Next.js', icon: SiNextdotjs },
+  { name: 'Flask', icon: SiFlask },
+  { name: 'Django', icon: SiDjango },
+  { name: 'Node.js', icon: SiNodedotjs },
+  { name: 'Express', icon: SiExpress },
+]
 
 function TechStack() {
   return (
-    <main className="icons">
+    <main className="grid grid-cols-4 gap-4">
 
-        {/*<div className="tech-icons">
-        <img src={html} />
-			<p>HTML</p>
+      {techStack.map(({ name, icon: Icon }) => (
+        <div key={name} className="flex flex-col items-center gap-2 border-2 border-[#646cff] shadow-md rounded-md py-2">
+          <Icon size={40} />
+          <p className="text-sm">{name}</p>
         </div>
-
-        <div className="tech-icons">
-        <img src={css} />
-			<p>CSS</p>
-        </div>*/}
-
-        <div className="tech-icons">
-        <img src={js} />
-			<p>JavaScript</p>
-        </div>
-
-      <div className="tech-icons">
-        <img src={typescript} />
-			<p>TypeScript</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={react} />
-			<p>ReactJs</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={redux} />
-			<p>Redux</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={NextImage} style={{color: '#666666'}} />
-			<p>NextJs</p>
-        </div>
-
-        <div className="tech-icons">
-			<BiLogoFlask />
-			<p>Flask</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={django} />
-			<p>Django</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={nodejs} />
-			<p>Node.Js</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={express} />
-			<p>Express Js</p>
-        </div>
+      ))}
 
     </main>
   )

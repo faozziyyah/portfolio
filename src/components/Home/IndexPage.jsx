@@ -1,4 +1,3 @@
-//import { useState } from 'react'
 import { Link } from "react-router-dom";
 import { Sidebar, Menu, MenuItem  } from 'react-pro-sidebar';
 import { Content } from 'rsuite';
@@ -20,8 +19,6 @@ export default function IndexPage() {
     <section className="show-container">
 
       <Sidebar backgroundColor="#1b1c54" width="5%" id="sidebar">
-
-        <img src={logo} alt="" id="logo" />
 
         <Menu style={{marginTop: '4em'}}> 
           
@@ -69,9 +66,9 @@ export default function IndexPage() {
 
       </Sidebar>
             
-      <Content className='main'>
+      <Content className='main flex justify-around items-center h-[100vh] m-auto text-left'>
 
-        <div className="navbar1" style={{width: '90%', margin: 'auto', marginTop: '5px'}}>
+        <div className="flex justify-between items-center md:hidden w-[90%] m-auto mt-[5px]">
 
           <Link className="" to='/' style={{width: "15%"}}> 
             <img src={logo} alt="" id="headerlogo" style={{width: '100%'}} />
@@ -89,31 +86,36 @@ export default function IndexPage() {
 
         </div>
       
-        <img src={myself} alt="home pic" style={{borderRadius: "50%", width: '30%', marginBottom: '2em', height: '150px'}} id="pic1" />
+        <img src={myself} alt="home pic" className="rounded-full w-[30%] mb-[2em] h-[150px]" id="pic1" />
 
         <article className="pattern-dots-md red text-pattern max-w-20pc overflow-visible">
 
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+              <h1 className="text-center md:text-left text-[30px]">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">👋🏻</span>
               </h1>
 
-              <h1 className="heading-name">
+              <h1 className="text-center md:text-left text-[30px]">
                 I&rsquo;M
-                <strong className="blue"> Faoziyyah</strong>, <br />
+                <strong className="text-[#646cff]"> Faoziyyah</strong>, <br />
                 <strong className="main-name"> Software Engineer.</strong>
               </h1>
 
-              <div style={{ textAlign: "left" }}>
+              <div className="text-left">
                 <Type />
               </div>
 
-              <div className="btns">
+              <p className="mt-4">
+                <EmailIcon color="primary" className="" sx />
+                <a href="mailto:omowunmidaud1@gmail.com" style={{textDecoration: "none"}}> omowunmidaud1@gmail.com </a>
+              </p>
 
-                <Link to='/about' className='btnlink' style={{textDecoration: "none"}}>
+              <div className="flex justify-between items-center mt-4">
+
+                <Link to='/about' className='' style={{textDecoration: "none"}}>
                   <button className='button'>About</button>
                 </Link>
-                <Link to='/projects' className='btnlink' style={{textDecoration: "none"}}>
+                <Link to='/projects' className='' style={{textDecoration: "none"}}>
                   <button className='btn'>Projects</button>
                 </Link>
                 
@@ -121,7 +123,7 @@ export default function IndexPage() {
 
         </article>
       
-        <img src={myself} alt="home pic" style={{borderRadius: "50%"}} id="pic2" />
+        <img src={myself} alt="home pic" className="rounded-full hidden md:block" />
 
       </Content>
 

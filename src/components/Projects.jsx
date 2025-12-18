@@ -1,7 +1,6 @@
 //import React from 'react'
 //import { useEffect, useState } from "react"
 import Header from "./Header"
-import Footer from "./Footer"
 import Card from "./Card";
 import photo from '../assets/screenshot.png'
 import photo1 from '../assets/screenshot1.png'
@@ -83,66 +82,25 @@ const projects = [
 
 function Projects() {
 
-    /*const [ projects, setprojects ] = useState([])
-
-    useEffect(() => {
-        fetch("http://127.0.0.1:8000/projects/", {
-            method: "GET",
-            headers: {
-                "content-type": "application/json",
-            }
-        }).then(response => response.json())
-        .then(response => setprojects(response))
-        .catch(error => console.log(error))
-    }, []) */
-
   return (
     
-    <div className="projects">
+    <div className="projects w-[90%] m-auto mb-8">
 
-        <Header />
+      <Header />
 
-		<h1 className="project-heading"> My Recent <strong className="blue">Works </strong> </h1>
-		<p style={{ color: "white" }}> Here are a few projects I&rsquo;ve worked on recently.</p>
+		<h1 className="text-[3em] font-extrabold mb-6"> Projects </h1>
 
-        <div className="layout">
+      <div className="grid grid-cols-3 gap-8">
 
-              {projects.map((project) => (
-                <Card
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  img={project.img}
-                  repolink={project.repolink}
-                  livelink={project.livelink}
-                  //imageSrc={project.getImageSrc()}
-                />
-              ))}
+        {projects.map((project) => (
+          <Card key={project.title} title={project.title}
+            description={project.description} img={project.img}
+            repolink={project.repolink}
+            livelink={project.livelink}
+          />
+        ))}
 
-            {/*{projects.map((project, id) => {
-                return (
-
-                    <div key={id} className="project">
-
-                        <img src={project.image} alt='' className="image" />
-
-                        <div className="extra">
-
-                            <h3 className="text">{project.title}</h3>
-                            <p className="text">{project.description}</p>
-                            <p className="text">{project.technology}</p>
-                            
-
-                        </div>
-
-                    </div>
-                
-                )
-            })}*/}
-
-        </div>
-
-        <Footer />
+      </div>
 
     </div>
   )

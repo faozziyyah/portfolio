@@ -1,56 +1,34 @@
 //import React from 'react'
-import mySQL from '../../assets/mysql.png'
-import { SiGithub } from "react-icons/si";
-import git from '../../assets/git.png'
-import postman from '../../assets/postman.png'
-import npm from '../../assets/npm.png'
-import yarn from '../../assets/yarn.png'
-import postgres from '../../assets/postgres.png'
-import figma from '../../assets/figma.png'
+import { SiGithub, SiRedis, SiFirebase, SiPostman, SiNpm, SiYarn,
+  SiGit, SiDigitalocean,
+  SiPostgresql, SiMysql, SiLinux, SiFigma, SiDocker,
+} from 'react-icons/si'
+
+const tools = [
+  { name: 'GitHub', icon: SiGithub },
+  { name: 'Postman', icon: SiPostman },
+  { name: 'npm', icon: SiNpm },
+  { name: 'Yarn', icon: SiYarn },
+  { name: 'Git', icon: SiGit },
+  { name: 'PostgreSQL', icon: SiPostgresql },
+  { name: 'MySQL', icon: SiMysql },
+  { name: 'Figma', icon: SiFigma },
+  { name: 'Docker', icon: SiDocker },
+  { name: 'Linux', icon: SiLinux },
+  { name: 'DigitalOcean', icon: SiDigitalocean },
+  { name: 'Redis', icon: SiRedis },
+  { name: 'Firebase', icon: SiFirebase },
+]
+
 function Tools() {
   return (
-    <main className="tools">
-
-        <div className="tech-icons">
-			<SiGithub />
-			<p>Github</p>
+    <main className="grid grid-cols-4 gap-4">
+      {tools.map(({ name, icon: Icon }) => (
+        <div key={name} className="flex flex-col items-center gap-2 border-2 border-[#646cff] shadow-md rounded-md py-2">
+          <Icon size={40} />
+          <p className="text-sm">{name}</p>
         </div>
-
-        <div className="tech-icons">
-        <img src={postman} />
-			<p>Postman</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={npm} />
-			<p>npm</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={yarn} />
-			<p>yarn</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={git} />
-			<p>git</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={postgres} />
-			<p>PostgreSQL</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={mySQL} />
-			<p>mySQL</p>
-        </div>
-
-        <div className="tech-icons">
-        <img src={figma} />
-			<p>Figma</p>
-        </div>
-
+      ))}
     </main>
   )
 }

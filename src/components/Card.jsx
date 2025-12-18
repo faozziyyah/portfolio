@@ -1,16 +1,11 @@
 import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-//import React from "react";
 
 const Card = ({ title, description, img, livelink, repolink }) => {
-  // Implement the UI for the Card component according to the instructions.
-  // You should be able to implement the component with the elements imported above.
-  // Feel free to import other UI components from Chakra UI if you wish to.
+  
   return (
-    <div className="project">
+    <div className="">
 
       <Image src={img} borderLeftRadius="5" borderRightRadius="5" alt='Img not loaded' width='100%' height="180px" />
 

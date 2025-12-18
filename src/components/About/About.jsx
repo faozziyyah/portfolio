@@ -6,31 +6,26 @@ import image from '../../assets/pic.svg'
 import { TechStack } from './TechStack';
 import { Tools } from './Tools';
 import Header from '../Header';
-import Footer from '../Footer';
 
 function About() {
   return (
     <div className="about">
 
         <Header />
-        
-        <h1 style={{ fontSize: "3em", marginTop: "1em", fontWeight: "900" }}>Know Who <strong className="blue">I&rsquo;M</strong></h1>
 
-        <section className="info">
+        <section className="flex justify-between items-center w-[90%] m-auto">
 
             <img src={image} alt="" id='pic4' />
 
-            <aside>
+            <aside className='w-[50%]'>
 
-                <p style={{ textAlign: "justify" }}>
-                    Hi There, I am <span className="blue">Faoziyyah </span>, 
-                    a graduate of backend engineering from <a href="https://altschoolafrica.com/">AltSchool Africa</a>. <br />
-                    Experienced Full-Stack Engineer skilled in building secure, scalable, and high-performance 
+                <p className='text-justify'>
+                    Hi There, I am <span className="blue">Faoziyyah </span>, an experienced Full-Stack Engineer skilled in building secure, scalable, and high-performance 
                     web applications using React, Next.js, Django, and Node.js. <br />
                     Proficient in designing responsive frontends, developing robust RESTful APIs, and integrating
                     third-party services to deliver seamless end-to-end solutions.
                     <br /> <br />
-                    Apart from coding, here are some other activities that I love to do..
+                    Here are some other activities I enjoy doing:
                 </p>
 
                 <ul>
@@ -38,7 +33,7 @@ function About() {
                     <MovieIcon />  Watching Movies
                   </li>
                   <li className="about-activity">
-                    <ChromeReaderModeIcon /> Reading Academic Books
+                    <ChromeReaderModeIcon /> Playing games
                   </li>
                   <li className="about-activity">
                     <HotelIcon /> Sleeping
@@ -58,62 +53,54 @@ function About() {
 
         </section>
 
-        <section className="skills">
+        <main className='flex justify-between w-[90%] m-auto mt-8'>
+
+            <section className="flex flex-col w-[40%]">
             
-            <h1 className="project-heading" style={{marginTop: '1em', fontWeight: '800'}}> Professional <strong className="blue">Skillset </strong> </h1>
+                <h1 className="font-extrabold text-xl mb-4"> Professional Skillset </h1>
 
-            <TechStack />
+                <TechStack />
 
-            <h1 className="project-heading" style={{marginTop: '1em', fontWeight: '800'}}> <strong className="blue">Tools</strong> I use </h1>
+            </section>
 
-            <Tools />
+            <section className="flex flex-col w-[40%]">
+    
+                <h1 className="font-extrabold text-xl mb-4"> Tools </h1>
+    
+                <Tools />
+    
+            </section>
 
-        </section>
+        </main>
 
-        <section>
+        <section className=' mt-8'>
 
-            <h1 className="project-heading" style={{marginTop: '1em', fontWeight: '800'}}> <strong className="blue">My</strong> Education </h1>
+            <h1 className="font-extrabold text-xl mb-4"> Education </h1>
 
-            <div className="edu">
+            <div className="flex justify-between items-center w-[90%] m-auto">
                     
-                <div className="edu-box">
+                <div className="edu-box h-[120px]">
 
-                    <div className="date" style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                        <p style={{color: 'white', fontStyle: 'italic'}}>Sep. 2019 - July 2024</p> <br />
-                        <h2 style={{fontSize: '25px', lineHeight: '30px'}}>Bachelor of Nursing Science</h2>
+                    <div className="date py-[10px]">
+                        <p className='text-white italic'>Sep. 2019 - July 2024</p> <br />
+                        <h2 className='text-[25px]' style={{lineHeight: '30px'}}>Olabisi Onabanjo University</h2>
                     </div>
 
-                    <div className="edu-name" style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                        <h4>Olabisi Onabanjo University</h4> <br />
-                        <p style={{fontSize: '15px', fontWeight: '800'}}>Studying Nursing science at Olabisi Onabanjo University, Nigeria.</p> 
-                    </div>
-
-                </div>
-
-                <div className="edu-box">
-
-                    <div className="date" style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                        <p style={{color: 'white', fontStyle: 'italic'}}>Apr 2022 - Apr 2023</p> <br />
-                        <h2 style={{fontSize: '25px', lineHeight: '30px'}}>Diploma in Backend Engineering</h2>
-                    </div>
-
-                    <div className="edu-name" style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                        <h4 className="p1">AltSchool Africa</h4> <br />
-                        <p style={{fontSize: '15px', fontWeight: '800'}}>A 1-year course designed to cover all aspects of full-stack development using python.</p> 
+                    <div className="flex justify-center items-center text-center px-[10px]">
+                        <h4>Bachelor of Nursing Science</h4>
                     </div>
 
                 </div>
 
-                <div className="edu-box">
+                <div className="edu-box h-[120px]">
 
-                    <div className="date" style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                        <p style={{color: 'white', fontStyle: 'italic'}}>Apr 2020 - Dec 2021</p> <br />
-                        <h2 style={{fontSize: '25px', lineHeight: '30px'}}>Frontend Website Development</h2>
+                    <div className="date py-[10px]">
+                        <p className='text-white italic'>Apr 2022 - Apr 2023</p> <br />
+                        <h2 className='text-[25px]' style={{lineHeight: '30px'}}>AltSchool Africa</h2>
                     </div>
 
-                    <div className="edu-name" style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                        <h4 className="p1">Techrity</h4> <br />
-                        <p style={{fontSize: '15px', fontWeight: '800'}}>A 28-week course designed to cover all aspects of full-stack development.</p> 
+                    <div className="flex justify-center items-center text-center px-[10px]">
+                        <h4 className="">Diploma in Backend Engineering</h4>
                     </div>
 
                 </div>
@@ -121,8 +108,6 @@ function About() {
             </div>
 
         </section>
-
-        <Footer />
 
     </div>
   )

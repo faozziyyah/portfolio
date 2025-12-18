@@ -5,19 +5,17 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PersonIcon from '@mui/icons-material/Person';
-import logo from '../assets/logo.png'
+//import logo from '../assets/logo.png'
 
 // eslint-disable-next-line react/prop-types
 const CustomNavbar = () => {
 
     return (
-      <div className="navbar" style={{width: '90%', margin: 'auto', marginTop: '5px',}}>
+      <div className="flex justify-between items-center mt-6 w-[90%] m-auto">
         
-        <Link className="" to='/' style={{width: "15%"}}> 
-          <img src={logo} alt="" id="headerlogo" style={{width: '100%'}} />
-        </Link>
+        <h1 className="text-[3em] font-extrabold"> About <strong className="blue">Me</strong></h1>
 
-        <nav style={{display: 'flex', justifyContent: 'space-between', width: '50%'}}>
+        <nav className="flex justify-between items-center">
 
           <Link className="" to='/about'> <PersonIcon /> </Link>
           <Link className="" to='/projects'> <FolderIcon /> </Link>

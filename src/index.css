@@ -1,6 +1,8 @@
 @import "rsuite/dist/rsuite.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200&display=swap');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   font-family: 'Montserrat', sans-serif;
@@ -41,14 +43,14 @@
   background-size: cover;
 }
 
-.main{
+/*.main{
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: left;
   margin: auto;
   height: 100vh;
-}
+}*/
 
 a {
   font-weight: 500;
@@ -413,7 +415,7 @@ button:focus-visible {
     justify-content: center;
   }
 
-  .info > img {
+  #pic3, #pic4 {
     width: 60%;
   }
   
@@ -479,8 +481,8 @@ button:focus-visible {
     align-items: center;
   }
 
-  .info > img {
-    width: 40%;
+  #pic3, #pic4 {
+    width: 30%;
   }
   
   .info > aside {
