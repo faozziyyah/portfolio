@@ -1,511 +1,81 @@
-@import "rsuite/dist/rsuite.css";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-} *
-
-.wave {
-	animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-	animation-duration: 2.1s; /* Change to speed up or slow down */
-	animation-iteration-count: infinite; /* Never stop waving :) */
-	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-	display: inline-block;
+  --bg-dark: #090d16;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(99, 102, 241, 0.25);
+  --accent-cyan: #06b6d4;
+  --accent-indigo: #6366f1;
+  --accent-purple: #a855f7;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color-scheme: dark;
 }
 
-/*.main-content{
-  height: 100vh;
-  background-image: url(./assets/girl.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
-
-.show-container{
-  display: flex;
-  height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.main, .about, .projects{
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./assets/girl.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+body {
+  background-color: var(--bg-dark);
+  color: #f1f5f9;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/*.main{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: left;
-  margin: auto;
-  height: 100vh;
-}*/
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.btns{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin-top: 2em;
+.glass-card {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-ul{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+  transform: translateY(-4px);
 }
 
-li{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  margin-top: 10px;
+.text-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.btnlink{
-  width: 40%;
-  text-decoration: none;
+.bg-gradient-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15), transparent 60%),
+              radial-gradient(circle at 80% 60%, rgba(6, 182, 212, 0.1), transparent 50%);
 }
 
-.button, .btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  border-radius: 5px;
-  padding: 0.6em 1.2em;
-  letter-spacing: 3px;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.code-font {
+  font-family: 'Fira Code', monospace;
 }
 
-.button, .btn:hover {
-  border: 1px solid transparent;
-  font-size: 1em;
-  /*background-color: #1a1a1a;*/
-  background-color: #171651;
-  color: #fff;
-
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
-
-.button:hover, .btn {
-  border: 1px solid #646cff;
-  background-color: transparent;
-  color: #535bf2;
+::-webkit-scrollbar-track {
+  background: #090d16;
 }
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
 }
-
-.main > img{
-    border-radius: 50%;
-    width: 20%;
-    height: 250px;
-    margin-right: 5em;
-    -webkit-animation: animate 1s linear infinite;
-    animation: animate 1s linear infinite;
-}
-
-.blue{
-  color: #646cff;
-}
-
-.info, .skills, .edu{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-  margin-top: 2em;
-}
-
-.skills{
-  flex-direction: column;
-}
-
-.icons, .tools{
-  display: flex;
-  width: 80%;
-  justify-content: space-around;
-  margin: auto;
-}
-
-.tech-icons{
-	font-size: 4.5em ;
-	margin: 15px ;
-	/*padding: 10px; */
-  width: 30%;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-	opacity: 0.93;
-	border: 1.7px solid #646cff ;
-	box-shadow: 4px 5px 4px 3px #171651 ;
-	vertical-align: middle ;
-	text-align: center ;
-	border-radius: 5px ;
-	/*display: table ;
-	overflow: hidden ;*/
-	transition: all 0.4s ease 0s ;
-}
-
-.icons .tech-icons > img {
-  width: 50%;
-}
-
-.tools .tech-icons > img {
-  width: 50%;
-}
-
-.tech-icons > p {
-	font-size: 0.25em !important;
-	margin-bottom: 0px;
-}
-
-.tech-icons:hover {
-	transform: scale(1.05) !important;
-	overflow: hidden !important;
-	border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
-}
-
-.edu{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.edu-box{
-  display: flex;
-  box-shadow: 4px 5px 4px 3px #171651 !important;
-  opacity: 0.93 !important;
-  border: 1.7px solid #646cff !important;
-  overflow: hidden !important;
-  transition: all 0.4s ease 0s !important;
-  border-radius: 5px !important;
-}
-
-.date{
-  background-color: #1b1c54;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 45%;
-  color: #fff;
-}
-
-.edu-name{
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 55%;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: 200px;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.extra {
-  transition: .5s ease;
-  opacity: 0;
-  width: 100%;
-  height: 180px;
-  position: absolute;
-  top: 6.4em;
-  left: 11.12em;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.layout{
-  display: flex;
-  width: 80%;
-  margin: auto;
-  margin-top: 2em;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.project {
-  position: relative;
-  margin-top: 1em;
-  background-color: transparent;
-  box-shadow: 2px 2px 2px black;
-  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-  border-radius: 5px;
-}
-
-/*.projlinks{
-  margin-top: 10px;
-} */
-
-.project:hover .image {
-  opacity: 0.1;
-}
-
-.extra {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
-  color: #fff;
-}
-
-.project:hover .extra {
-  opacity: 1;
-  color: #fff;
-}
-
-.text {
-  color: white;
-  font-size: 16px;
-}
-
-.footer{
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: #213547;
-}
-
-.footertop, .footerbottom{
-  display: flex;
-}
-
-.footertop > p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@-webkit-keyframes animate{
-  0%{
-    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
-  }
-  100%{
-    box-shadow: 0 0 0px 15px #070640;
-  }
-}
-  
-@keyframes animate{
-  0%{
-    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
-  }
-  100%{
-    box-shadow: 0 0 0px 15px #171651;
-  }
-}
-
-@keyframes wave-animation {
-	0% {
-		transform: rotate(0deg);
-	}
-	10% {
-		transform: rotate(14deg);
-	} /* The following five values can be played with to make the waving more or less extreme */
-	20% {
-		transform: rotate(-8deg);
-	}
-	30% {
-		transform: rotate(14deg);
-	}
-	40% {
-		transform: rotate(-4deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	60% {
-		transform: rotate(0deg);
-	} /* Reset for the last half to pause */
-	100% {
-		transform: rotate(0deg);
-	}
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  
-  #sidebar, #pic2, #pic3{
-    display: none;
-  }
-
-  .main{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .show-container{
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar, .navbar1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-  }
-
-  .heading, .heading-name{
-    font-size: 30px;
-    text-align: center;
-  }
-
-  .info{
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  #pic3, #pic4 {
-    width: 60%;
-  }
-  
-  .info > aside {
-    width: 90%;
-    margin: auto;
-    margin-top: 2em;
-  }
-
-  .icons, .tools{
-    flex-wrap: wrap;
-  }
-
-  .edu{
-    flex-direction: column;
-  }
-
-  .edu-box{
-    margin-top: 2em;
-  }
-
-  .footertop, .footerbottom{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 1em;
-  }
-
-  .footertop{
-    text-align: left;
-  }
-
-  .project {
-    width: 90%;
-    margin: auto;
-    margin-top: 1em;
-  }
-
-  .extra {
-    top: 6.4em;
-    left: 11.6em;
-  }
-  
-}
-
-@media screen and (min-width: 769px) {
-  
-  #pic1, .navbar1, #pic4{
-    display: none;
-  }
-
-  #logo{
-    width: 100%;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
-
-  .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #pic3, #pic4 {
-    width: 30%;
-  }
-  
-  .info > aside {
-    width: 50%;
-  }
-
-  ul{
-    width: 50%;
-  }
-
-  .edu-box{
-    width: 45%;
-    margin-top: 1em;
-  }
-
-  .footertop, .footerbottom{
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-  }
-
-  .project {
-    width: 30%;
-  }
-  
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }
